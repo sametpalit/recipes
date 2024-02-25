@@ -1,8 +1,7 @@
 body {
-    background-color: rgb(228, 12, 4);
-    
+    background: linear-gradient(to right, rgb(0, 146, 70), rgb(0, 146, 70) 33.33%, rgba(255, 255,255 ) 33.33%, rgba(255, 255,255) 66.66%, rgb(206, 43, 55) 66.66%);
     background-repeat: no-repeat;
-    background-position: 60% 0%;
+    background-attachment: fixed;
     background-size: cover;
 }
 h2 {
