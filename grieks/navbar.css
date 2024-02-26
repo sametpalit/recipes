@@ -39,6 +39,7 @@ body{
     &:hover{
       background:#eee;
       color:gray;
+      cursor: pointer;
     }
     
     a {
