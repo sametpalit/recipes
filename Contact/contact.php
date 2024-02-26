@@ -13,6 +13,9 @@
         <img src="" alt="">
     </div>
     <div class="header">
+    <div class="logo">
+    <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
+    </div>
         <h2>Mediterrane recepten</h2> <br>
         <p>Kies hier uit een van de regio's:</p>
     </div>

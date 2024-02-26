@@ -21,6 +21,15 @@ p {
 }
 
 .header {
-    width: 300px;
-    margin-left: 870px;
+    width: 50%;
+margin: 0 auto;
+text-align: center;
+}
+.logo {
+    width: 50%;
+    margin: 0 auto; 
+}
+
+.logo img {
+    max-width: 100%; 
 }
