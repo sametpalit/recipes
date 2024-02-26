@@ -18,13 +18,13 @@
     </div>
     <div class="skew-menu">
         <ul>
-            <li><a href="/italiaans/italiaans.html">Italiaans</a></li>
-            <li><a href="recepten.php?land=Turks">Turks</a></li>
-            <li><a href="/grieks/grieks.html">Grieks</a></li>
-            <li><a href="/spaans/spaans.html">Spaans</a></li>
-            <li><a href="/balkan/balkan.html">Balkan</a></li>
-            <li><a href="/na/na.html">N-Afrikaans</a></li>
-            <li><a href="/Contact/contact.html">Contact</a></li>
+            <li><a href="/italiaans/italiaans.php">Italiaans</a></li>
+            <li><a href="#">Turks</a></li>
+            <li><a href="/grieks/grieks.php">Grieks</a></li>
+            <li><a href="/spaans/spaans.php">Spaans</a></li>
+            <li><a href="/balkan/balkan.php">Balkan</a></li>
+            <li><a href="/na/na.php">N-Afrikaans</a></li>
+            <li><a href="/Contact/contact.php">Contact</a></li>
         </ul>
     </div>
 

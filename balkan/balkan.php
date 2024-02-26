@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="balkan.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
@@ -18,18 +18,18 @@
     </div>
     <div class="skew-menu">
         <ul>
-            <li><a href="/italiaans/italiaans.html">Italiaans</a></li>
-            <li><a href="/turks/turks.html">Turks</a></li>
-            <li><a href="/grieks/grieks.html">Grieks</a></li>
-            <li><a href="/spaans/spaans.html">Spaans</a></li>
-            <li><a href="/balkan/balkan.html">Balkan</a></li>
-            <li><a href="/na/na.html">N-Afrikaans</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/italiaans/italiaans.php">Italiaans</a></li>
+            <li><a href="/turks/turks.php">Turks</a></li>
+            <li><a href="/grieks/grieks.php">Grieks</a></li>
+            <li><a href="/spaans/spaans.php">Spaans</a></li>
+            <li><a href="#">Balkan</a></li>
+            <li><a href="/na/na.php">N-Afrikaans</a></li>
+            <li><a href="/Contact/contact.php">Contact</a></li>
         </ul>
     </div>
 
     <div class="inhoud">
-        
+        <?php include 'class.php'; ?>
     </div>
 </body>
 </html>

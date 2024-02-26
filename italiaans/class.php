@@ -16,7 +16,7 @@ if (!$db) {
 } else {
     $ret = $db->query($sql);
     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-        if ($row['Land'] == 'Turkije') {
+        if ($row['Land'] == 'Italie') {
 ?>
     <li>
         <h2><?php echo $row['Recepten']; ?></h2>
