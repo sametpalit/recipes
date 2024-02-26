@@ -13,7 +13,7 @@
         <img src="" alt="">
     </div>
     <div class="header">
-        <h2>Meditterraanse recepten</h2> <br>
+        <h2>Mediterrane recepten</h2> <br>
         <p>Kies hier uit een van de regio's:</p>
     </div>
     <div class="skew-menu">
