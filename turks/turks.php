@@ -29,7 +29,10 @@
     </div>
 
     <div class="inhoud">
-        
+        <h1>Recepten</h1>
+        <ul>
+            <?php include '/class.php'; ?>
+        </ul>
     </div>
 </body>
 </html>
