@@ -27,9 +27,25 @@
             <li><a href="Contact/contact.php">Contact</a></li>
         </ul>
     </div>
+    <div class="zoekbalk-container">
+        <form action="index.php" method="GET">
+            <input type="text" name="q" id="zoek-input" placeholder="Zoek recepten..." value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
+            <button type="submit" id="zoek-btn">Zoek</button>
+        </form>
+    </div>
 
+    <?php
+    // Controleer of er een zoekterm is verzonden via het formulier
+    if(isset($_GET['q'])) {
+        $zoekterm = $_GET['q'];
+        // Hier kun je de zoekactie uitvoeren en de resultaten weergeven
+        echo "<h2>Zoekresultaten voor: $zoekterm</h2>";
+        // Voer hier de logica uit om de zoekresultaten weer te geven
+    }
+    ?>
     <div class="inhoud">
         
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

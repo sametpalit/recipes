@@ -24,3 +24,29 @@ p {
     width: 300px;
     margin-left: 870px;
 }
+.zoekbalk-container {
+    display: flex;
+    margin: 20px;
+}
+
+#zoek-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#zoek-btn {
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#zoek-btn:hover {
+    background-color: #0056b3;
+}
