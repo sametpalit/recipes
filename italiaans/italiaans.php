@@ -31,8 +31,30 @@
         </ul>
     </div>
 
-    <div class="inhoud">
+    <div class="recepten-container">
         <?php include 'class.php'; ?>
     </div>
+
+    <div class="popup" id="popup">
+    </div>
+
+    <script>
+        const receptKaarten = document.querySelectorAll('.recept-kaart');
+        const popup = document.getElementById('popup');
+
+        receptKaarten.forEach((kaart) => {
+            kaart.addEventListener('click', () => {
+                const receptDetails = kaart.querySelector('.recept-details').innerHTML;
+                popup.innerHTML = receptDetails;
+                popup.style.display = 'block';
+            });
+        });
+
+        popup.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -43,11 +43,9 @@
     </div>
 
     <div class="popup" id="popup">
-        <!-- Popup-inhoud wordt hier ingevoegd -->
     </div>
 
     <script>
-        // JavaScript voor de popup
         const receptKaarten = document.querySelectorAll('.recept-kaart');
         const popup = document.getElementById('popup');
 

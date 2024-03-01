@@ -18,7 +18,7 @@
     </div>
     <div class="skew-menu">
         <ul>
-            <li><a href="#">Italiaans</a></li>
+            <li><a href="italiaans/italiaans.php">Italiaans</a></li>
             <li><a href="turks/turks.php">Turks</a></li>
             <li><a href="grieks/grieks.php">Grieks</a></li>
             <li><a href="spaans/spaans.php">Spaans</a></li>
@@ -35,12 +35,9 @@
     </div>
 
     <?php
-    // Controleer of er een zoekterm is verzonden via het formulier
     if(isset($_GET['q'])) {
         $zoekterm = $_GET['q'];
-        // Hier kun je de zoekactie uitvoeren en de resultaten weergeven
         echo "<h2>Zoekresultaten voor: $zoekterm</h2>";
-        // Voer hier de logica uit om de zoekresultaten weer te geven
     }
     ?>
     <div class="inhoud">
