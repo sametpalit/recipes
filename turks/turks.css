@@ -1,35 +1,51 @@
+@font-face {
+    font-family: 'Turqoise';
+    /* Geef een naam aan je lettertype */
+    src: url('../Turquoise/Turquoise.ttf') format('truetype');
+    /* Pad naar je TTF-lettertypebestand */
+}
+
 body {
-    background-color: rgb(228, 12, 4);
-    
+    background-color: rgba(92, 191, 199, 255);
+
     background-repeat: no-repeat;
     background-position: 60% 0%;
     background-size: cover;
 }
-h2 {
+
+.titel {
     text-align: center;
-    font-family:Helvetica Neue, Helvetica, sans-serif;
+    font-family: 'Turqoise', sans-serif;
     font-weight: 900;
-    background-color: rgba(145, 0, 0, 0.89);
+    background-color: rgba(92, 191, 199, 255);
     color: white;
+    font-size: 90px;
 }
 
 p {
     text-align: center;
-    font-family:Helvetica Neue, Helvetica, sans-serif;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
     font-weight: 900;
     color: white;
 }
 
 .header {
+    background-color: rgba(92, 191, 199, 255);
+    padding: 20px;
     width: 50%;
-margin: 0 auto;
-text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
+
 .logo {
     width: 50%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .logo img {
-    max-width: 100%; 
+    max-width: 100%;
+}
+.inhoud {
+    background-color: white;
+    padding: 20px; /* Optioneel: voeg wat padding toe voor esthetisch doel */
 }

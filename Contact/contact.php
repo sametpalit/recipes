@@ -9,13 +9,16 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
-        </div>
-        <h2>Contact</h2>
+    <div class="image">
+        <img src="" alt="">
     </div>
-
+    <div class="header">
+    <div class="logo">
+    <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
+    </div>
+        <h2>Mediterrane recepten</h2> <br>
+        <p>Kies hier uit een van de regio's:</p>
+    </div>
     <div class="skew-menu">
         <ul>
             <li><a href="../italiaans/italiaans.php">Italiaans</a></li>
