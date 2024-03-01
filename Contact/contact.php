@@ -16,8 +16,7 @@
     <div class="logo">
     <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
     </div>
-        <h2>Mediterrane recepten</h2> <br>
-        <p>Kies hier uit een van de regio's:</p>
+        <h2>Contact</h2> <br>
     </div>
     <div class="skew-menu">
         <ul>
@@ -32,7 +31,78 @@
     </div>
 
     <div class="inhoud">
-    <?php include 'class.php'; ?>
+    <div id="popup-form-container" style="display:none;">
+    <form id="contact-form" method="POST">
+  <div class="form-row form-error" style="display:none;"></div>
+  <div class="form-row">
+    <p id="close">ESC to close</p>
+    <label for="contact-form-name">Name:</label>
+    <input id="contact-form-name" class="form-input" type="text" name="name" required>
+  </div>
+  <div class="form-row">
+    <label for="contact-form-email">Email:</label>
+    <input id="contact-form-email" class="form-input" type="email" name="email" required>
+  </div>
+  <div class="form-row">
+    <label for="contact-form-phone">Phone:</label>
+    <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+  </div>
+  <div class="form-row">
+    <label for="contact-form-message">Message:</label>
+    <textarea id="contact-form-message" class="form-input" name="message" required></textarea>
+  </div>
+  <button type="submit" name="sendMail">Submit</button>
+</form>
+
+    <?php
+    if (isset($_POST["sendMail"])) {
+        if(
+            !empty($_POST['name'])
+            && !empty($_POST['email'])
+            && !empty($_POST['message'])
+        ){
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $phone = $_POST["phone"];
+            $message = $_POST["message"];
+    
+    
+            $to = "089525@glr.nl";
+            $subject = "New Contact Form Submission";
+            $body = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nMessage: {$message}";
+            $headers = "From: {$email}";
+    
+    
+            if (mail($to, $subject, $body, $headers)) {
+                echo "Message sent successfully!";
+            } else {
+                echo "Failed to send message.";
+            }
+        }
+    }
+    ?>
+    </div>
+    <div class='btn-con'>
+    <button id="show-popup">Show Contact Form</button>
+    </div>
+    <script>
+        function showPopupForm() {
+          document.getElementById("popup-form-container").style.display = "block";
+        }
+        function hidePopupForm() {
+          document.getElementById("popup-form-container").style.display = "none";
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+
+        document.getElementById('show-popup').addEventListener('click', () => {
+        showPopupForm();
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') hidePopupForm()
+        });
+        });
+    </script>
     </div>
 </body>
 </html>

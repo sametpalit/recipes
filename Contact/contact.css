@@ -20,6 +20,10 @@ p {
     color: white;
 }
 
+#close {
+    color: black;
+}
+
 .header {
     width: 50%;
 margin: 0 auto;
@@ -32,4 +36,54 @@ text-align: center;
 
 .logo img {
     max-width: 100%; 
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-input {
+    display: block;
+}
+
+.form-error {
+    color: red;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#popup-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popup-form-container form {
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.btn-con {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
