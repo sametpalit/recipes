@@ -13,10 +13,11 @@
         <img src="" alt="">
     </div>
     <div class="header">
-    <div class="logo">
-    <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
-    </div>
-        <div class= "titel">Mediterrane recepten</div> <br>
+        <div class="logo">
+            <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
+        </div>
+        <div class="titel">Mediterrane recepten</div>
+        <br>
         <p>Kies hier uit een van de regio's:</p>
     </div>
     <div class="skew-menu">
@@ -37,21 +38,32 @@
         </form>
     </div>
 
-    <?php
-    // Controleer of er een zoekterm is verzonden via het formulier
-    if(isset($_GET['q'])) {
-        $zoekterm = $_GET['q'];
-        // Hier kun je de zoekactie uitvoeren en de resultaten weergeven
-        echo "<h2>Zoekresultaten voor: $zoekterm</h2>";
-        // Voer hier de logica uit om de zoekresultaten weer te geven
-    }
-    ?>
-    <div class="inhoud">
-        <h1>Recepten</h1>
-        <ul>
-            <?php include 'class.php'; ?>
-        </ul>
+    <div class="recepten-container">
+        <?php include 'class.php'; ?>
     </div>
-    <script src="../script.js"></script>
+
+    <div class="popup" id="popup">
+        <!-- Popup-inhoud wordt hier ingevoegd -->
+    </div>
+
+    <script>
+        // JavaScript voor de popup
+        const receptKaarten = document.querySelectorAll('.recept-kaart');
+        const popup = document.getElementById('popup');
+
+        receptKaarten.forEach((kaart) => {
+            kaart.addEventListener('click', () => {
+                const receptDetails = kaart.querySelector('.recept-details').innerHTML;
+                popup.innerHTML = receptDetails;
+                popup.style.display = 'block';
+            });
+        });
+
+        popup.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

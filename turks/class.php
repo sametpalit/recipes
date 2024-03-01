@@ -18,16 +18,20 @@ if (!$db) {
     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
         if ($row['Land'] == 'Turkije') {
 ?>
-    <li>
-        <h2><?php echo $row['Recepten']; ?></h2>
-        <p><strong>Land:</strong> <?php echo $row['Land']; ?></p>
-        <p><strong>Bereidingstijd:</strong> <?php echo $row['Bereidingstijd']; ?></p>
-        <p><strong>Ingrediënten:</strong> <?php echo $row['Ingredienten']; ?></p>
-        <p><strong>Uitleg:</strong> <?php echo $row['Uitleg']; ?></p>
-        <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Recepten']; ?>">
-    </li>
+    <div class="recept-kaart" data-recept="<?php echo htmlspecialchars($row['Recepten']); ?>">
+        <img src="<?php echo htmlspecialchars($row['Image']); ?>" alt="<?php echo htmlspecialchars($row['Recepten']); ?>">
+        <h2><?php echo htmlspecialchars($row['Recepten']); ?></h2>
+        <div class="recept-details" style="display: none;">
+            <h2><?php echo htmlspecialchars($row['Recepten']); ?></h2>
+            <img src="<?php echo htmlspecialchars($row['Image']); ?>" alt="<?php echo htmlspecialchars($row['Recepten']); ?>">
+            <p><strong>Land:</strong> <?php echo htmlspecialchars($row['Land']); ?></p>
+            <p><strong>Bereidingstijd:</strong> <?php echo htmlspecialchars($row['Bereidingstijd']); ?></p>
+            <p><strong>Ingrediënten:</strong> <?php echo htmlspecialchars($row['Ingredienten']); ?></p>
+            <p><strong>Uitleg:</strong> <?php echo htmlspecialchars($row['Uitleg']); ?></p>
+        </div>
+    </div>
 <?php
-        } 
+        }
     }
     $db->close();
 }
