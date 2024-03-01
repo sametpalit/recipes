@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="grieks.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="../images/logo4.png" type="image/x-icon">
+<link rel="icon" href="../images/logo4.png" type="image/png">
 </head>
 <body>
     <div class="image">
@@ -14,10 +16,13 @@
     </div>
     <div class="header">
     <div class="logo">
-    <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
-    </div>
-        <h2>Mediterrane recepten</h2> <br>
-        <p>Kies hier uit een van de regio's:</p>
+    <a href="../index.php">
+        <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
+    </a>
+</div>
+        <div class="titel">Mediterrane recepten</div>
+        <br>
+        <p class= "p1">Kies hier uit een van de regio's:</p>
     </div>
     <div class="skew-menu">
         <ul>
@@ -39,22 +44,36 @@
     </div>
 
     <script>
-        const receptKaarten = document.querySelectorAll('.recept-kaart');
-        const popup = document.getElementById('popup');
+    const receptKaarten = document.querySelectorAll('.recept-kaart');
+    const popup = document.getElementById('popup');
 
-        receptKaarten.forEach((kaart) => {
-            kaart.addEventListener('click', () => {
-                const receptDetails = kaart.querySelector('.recept-details').innerHTML;
-                popup.innerHTML = receptDetails;
-                popup.style.display = 'block';
-            });
-        });
+    receptKaarten.forEach((kaart) => {
+        kaart.addEventListener('click', () => {
+            const receptDetails = kaart.querySelector('.recept-details').innerHTML;
+            popup.innerHTML = receptDetails;
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden'; 
 
-        popup.addEventListener('click', (event) => {
-            if (event.target === popup) {
-                popup.style.display = 'none';
+            const popupRect = popup.getBoundingClientRect();
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            if (popupRect.width > windowWidth * 0.9) {
+                popup.style.width = windowWidth * 0.9 + 'px';
+            }
+            if (popupRect.height > windowHeight * 0.9) {
+                popup.style.height = windowHeight * 0.9 + 'px';
             }
         });
-    </script>
+    });
+
+    popup.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -1,20 +1,53 @@
+@font-face {
+    font-family: 'Turqoise';
+    src: url('../Turquoise/Turquoise.ttf') format('truetype');
+}
+
 body {
-    background-color: rgb(228, 12, 4);
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: rgba(92, 191, 199, 255);
+    background-repeat: no-repeat;
+    background-position: 60% 0%;
+    background-size: cover;
+}
+
+.titel {
+    text-align: center;
+    font-family: 'Turqoise', sans-serif;
+    font-weight: 900;
+    background-color: rgba(92, 191, 199, 255);
     color: white;
+    font-size: 90px;
+}
+.p1 {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+p {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
 }
 
 .header {
+    background-color: rgba(92, 191, 199, 255);
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
-    margin-top: 50px;
+}
+
+.logo {
+    width: 50%;
+    margin: 0 auto;
 }
 
 .logo img {
-    width: 150px;
-    height: auto;
+    max-width: 100%;
 }
+
 
 #popup-form-container {
     position: fixed;

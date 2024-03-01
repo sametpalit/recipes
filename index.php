@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="images/logo4.png" type="image/x-icon">
+<link rel="icon" href="images/logo4.png" type="image/png">
 </head>
 <body>
     <div class="image">
         <img src="" alt="">
     </div>
     <div class="header">
-        <h2>Meditterraanse recepten</h2> <br>
-        <p>Kies hier uit een van de regio's:</p>
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo4.png" alt="Logo" width="150px" height="150px">
+            </a>
+        </div>
+        <div class="titel">Mediterrane recepten</div>
+        <br>
+        <p class= "p1">Kies hier uit een van de regio's:</p>
     </div>
     <div class="skew-menu">
         <ul>
@@ -34,14 +42,14 @@
         </form>
     </div>
 
+    <div class="inhoud">
     <?php
     if(isset($_GET['q'])) {
         $zoekterm = $_GET['q'];
         echo "<h2>Zoekresultaten voor: $zoekterm</h2>";
+        include 'zoek.php';
     }
     ?>
-    <div class="inhoud">
-        
     </div>
     <script src="script.js"></script>
 </body>

@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="turks.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="../images/logo4.png" type="image/x-icon">
+<link rel="icon" href="../images/logo4.png" type="image/png">
 </head>
 <body>
     <div class="image">
         <img src="" alt="">
     </div>
     <div class="header">
-        <div class="logo">
-            <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
-        </div>
+    <div class="logo">
+    <a href="../index.php">
+        <img src="../images/logo4.png" alt="Logo" width="150px" height="150px">
+    </a>
+</div>
         <div class="titel">Mediterrane recepten</div>
         <br>
-        <p>Kies hier uit een van de regio's:</p>
+        <p class= "p1">Kies hier uit een van de regio's:</p>
     </div>
     <div class="skew-menu">
         <ul>
@@ -31,37 +35,47 @@
             <li><a href="../Contact/contact.php">Contact</a></li>
         </ul>
     </div>
-    <div class="zoekbalk-container">
-        <form action="turks.php" method="GET">
-            <input type="text" name="q" id="zoek-input" placeholder="Zoek recepten..." value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
-            <button type="submit" id="zoek-btn">Zoek</button>
-        </form>
-    </div>
 
     <div class="recepten-container">
         <?php include 'class.php'; ?>
     </div>
 
     <div class="popup" id="popup">
+    <div class="close-btn">&times;</div>
+
     </div>
 
     <script>
-        const receptKaarten = document.querySelectorAll('.recept-kaart');
-        const popup = document.getElementById('popup');
+    const receptKaarten = document.querySelectorAll('.recept-kaart');
+    const popup = document.getElementById('popup');
 
-        receptKaarten.forEach((kaart) => {
-            kaart.addEventListener('click', () => {
-                const receptDetails = kaart.querySelector('.recept-details').innerHTML;
-                popup.innerHTML = receptDetails;
-                popup.style.display = 'block';
-            });
-        });
+    receptKaarten.forEach((kaart) => {
+        kaart.addEventListener('click', () => {
+            const receptDetails = kaart.querySelector('.recept-details').innerHTML;
+            popup.innerHTML = receptDetails;
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden'; 
 
-        popup.addEventListener('click', (event) => {
-            if (event.target === popup) {
-                popup.style.display = 'none';
+
+            const popupRect = popup.getBoundingClientRect();
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            if (popupRect.width > windowWidth * 0.9) {
+                popup.style.width = windowWidth * 0.9 + 'px';
+            }
+            if (popupRect.height > windowHeight * 0.9) {
+                popup.style.height = windowHeight * 0.9 + 'px';
             }
         });
-    </script>
+    });
+
+    popup.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+    });
+</script>
 </body>
 </html>

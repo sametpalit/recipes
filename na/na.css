@@ -1,37 +1,51 @@
+@font-face {
+    font-family: 'Turqoise';
+    src: url('../Turquoise/Turquoise.ttf') format('truetype');
+}
+
 body {
-    background-color: rgb(240, 201, 94);
-    
+    background-color: rgba(92, 191, 199, 255);
     background-repeat: no-repeat;
     background-position: 60% 0%;
     background-size: cover;
 }
-h2 {
-    text-align: center;
-    font-family:Helvetica Neue, Helvetica, sans-serif;
-    font-weight: 900;
-    background-color: rgba(145, 0, 0, 0.89);
-    color: white;
-}
 
+.titel {
+    text-align: center;
+    font-family: 'Turqoise', sans-serif;
+    font-weight: 900;
+    background-color: rgba(92, 191, 199, 255);
+    color: white;
+    font-size: 90px;
+}
+.p1 {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
 p {
     text-align: center;
-    font-family:Helvetica Neue, Helvetica, sans-serif;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
     font-weight: 900;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .header {
+    background-color: rgba(92, 191, 199, 255);
+    padding: 20px;
     width: 50%;
-margin: 0 auto;
-text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
+
 .logo {
     width: 50%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .logo img {
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .recepten-container {
@@ -58,7 +72,8 @@ text-align: center;
 
 .recept-kaart img {
     width: 100%;
-    height: auto;
+    height: 200px; 
+    object-fit: cover; 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -70,8 +85,16 @@ text-align: center;
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 9999;
+}
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
