@@ -99,4 +99,14 @@ p {
     object-fit: cover;
     border-radius: 5px;
 }
+@media only screen and (max-width: 768px) {
+    .recept-kaart {
+        width: calc(50% - 20px);
+    }
+}
 
+@media only screen and (max-width: 480px) {
+    .recept-kaart {
+        width: calc(100% - 20px);
+    }
+}

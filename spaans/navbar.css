@@ -49,3 +49,30 @@ body{
       transform:skew(25deg);
     }
   }
+  @media only screen and (max-width: 768px) {
+    .skew-menu ul li {
+        float: none;
+        display: block;
+        border-right: none;
+        border-radius: 0;
+        transform: none;
+        box-shadow: none;
+        margin-bottom: 5px;
+    }
+
+    .skew-menu ul li:first-child {
+        border-radius: 0;
+    }
+
+    .skew-menu ul li:last-child {
+        border-radius: 0;
+    }
+
+    .skew-menu ul li:hover {
+        background: none;
+    }
+
+    .skew-menu ul li a {
+        transform: none;
+    }
+}
